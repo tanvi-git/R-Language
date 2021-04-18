@@ -1,0 +1,99 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="simulator.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="simulator.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+  <title>R Lanaguage Simulator</title>
+
+</head>
+
+<body>
+  <!-- *************header starts here************* -->
+
+  <div class='header'> Arithmetic Operation </div>
+  <!-- *************header ends******************** -->
+    <div class="grid-container">
+      <!-- ****************Input container starts *********** -->
+      <div class="input input---1">
+        <div class="initialhead">
+          Initialization</div>
+        <div class="input_values">
+          <div class="instruction">
+            Select operator
+          </div><br>
+          <select name="" onchange="selectChange()" id="operator" class="button_operator">
+            <option value="#">  -Select-</option>
+            <option value="+">Addition</option>
+            <option value="-">Subtraction</option>
+            <option value="*">Multiplication</option>
+            <option value="/">Division</option>
+            <option value="%">Remainder</option>
+            <option value="/">Quotient</option>
+            <option value="^">Power of</option>
+          </select>
+          <br><br>
+          <div class='instructionText'>Enter first operand</div>
+          <input type="number" id="num1"> <br>
+          <br>
+          <div class='instructionText'>Enter second operand</div>
+          <input type="number" id="num2"> <br><br>
+          <button class='button startButton' id="btnStart" onclick="operation()"
+            style="font-family: 'Ubuntu', sans-serif; transform: scale(1.2); padding:0px 5px;">Start</button>
+          <button class='button startButton' id="btnStart1" onclick="nextStep()" 
+           style="font-family: 'Ubuntu', sans-serif; transform: scale(1.2); margin-left: 10px; padding:0px 5px;">Next</button>
+          <input type="button" onclick="location.reload()" value="Reset"
+            style="font-family:'Ubuntu', sans-serif ; transform: scale(1.2); margin-left: 10px; padding: 0px 5px;"></input>
+        </div>
+      </div>
+      <!-- ****************Input container ends *********** -->
+        <!-- **********execution block starts *************** -->
+      <div class="input input---2">
+        <div class="initialhead">Code</div>
+        <div id="content11">
+          <p id="execution"></p>
+          <p id="line1">
+  
+          </p>
+          <p id="line2">
+  
+          </p>
+          <p id="line3">
+  
+          </p>
+          <p id="line4">
+  
+          </p>
+          <p id="line5">
+  
+          </p>
+        </div>
+      </div>
+      <!-- **********execution block starts *************** -->
+      <!-- ***********output block starts****************** -->
+      <div class="input">
+        
+        <h2 style="background: #16A085;margin:0;height:40px;color:white;font-family:'Ubuntu', sans-serif; cursor: not-allowed;
+        ">Execution</h2>
+        <p id="result">
+        </p>
+        <!-- <div class="initialhead" id="output">
+          Result -->
+        </div>
+            <div class="input">
+                <h2 style="background: #16A085;margin:0;height:40px;color:white;font-family:'Ubuntu', sans-serif; cursor: not-allowed;">Output</h2>
+                <h3 id="result1"></h3>
+            </div>
+      </div>
+       <!-- ***********output block ends****************** -->
+  </div>
+
+
+
+</body>
+
+</html>
